@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Report a bug so we can fix it
-title: Title your bug here
+title: ''
 labels: bug
 assignees: AI-Lyric-Editor
 
@@ -28,4 +28,5 @@ Add any other context about the problem here.
 
 Your support is greatly appreciated!
 
+Give Your description below:
 ----------------------------------------------------------------------------
