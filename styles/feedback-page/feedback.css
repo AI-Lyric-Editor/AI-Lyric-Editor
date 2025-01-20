@@ -1,0 +1,74 @@
+#feedback-page {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background: rgb(0, 0, 0);
+}
+
+.feedback-option {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	animation: lyrics-slide-up 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+	width: 60%;
+	height: 60px;
+	margin-top: 30px;
+}
+
+.feedback-option:hover {
+	scale: 1.03;
+}
+
+.feedback-option:active {
+	scale: 1.05;
+}
+
+.feedback-bg {
+	width: 2%;
+	height: 100%;
+	background: linear-gradient(357deg, var(--gradient));
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#feedback-page a {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	/* Set 100% to fit remaining space */
+	width:100%;
+	height: 100%;
+	padding-left: 3.5em;
+	background: linear-gradient(var(--greygradient));
+	border-top: 1px solid white;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-top-right-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+	text-decoration: none;
+	font-weight: 900;
+	font-size: 1em;
+	color: white;
+}
+
+#feedback-page a svg {
+	position: absolute;
+	z-index: 1;
+	left: 10px;
+	width: 2em;
+	height: 2em;
+	fill: white;
+}
+
+#email-us {
+	display: flex;
+	flex-direction: column;
+}
+
+#email-us sub {
+	font-size: 0.8em;
+	font-weight: 800;
+}
