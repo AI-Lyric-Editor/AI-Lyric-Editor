@@ -1,0 +1,392 @@
+/* This is the stylesheet for mobile phones */
+
+/* Comment Rules:
+ALL-CAPS for main topics,
+1 newline between main topic title and topic,
+5 newlines at end of main topic,
+First letter uppercased for sub-topics, 
+0 newlines between subtopic title and subtopic,
+2 newlines at end of subtopic */
+
+
+
+/* MOBILE PHONES */
+
+@media only screen and (max-width: 450px) {
+
+	* {
+		line-height: 1.1em;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	body {
+		/* IMPORTANT THIS ADJUST ALL ELEMENTS INSIDE THE BODY GRID */
+		grid-template-columns: 100%; 
+		grid-template-rows: 12% 72% 2% 14%;
+		overflow: scroll;
+	}
+
+	/* To adjust the size of the loading screen logo */
+	#loading-screen img {
+		width: 90%;
+		height: 90%;
+	}
+
+
+
+	/* To adjust positioning of the progress bar */
+	#loading-container {
+		height: fit-content;
+		top: 58%;
+	}
+
+	#loading-bar-percent {
+		font-size: small;
+		margin-left: 10px;
+		margin-bottom: 5px;
+	}
+
+	#loading-bar {
+		height: 12px;
+		padding: 3px;
+	}
+
+	#loading-screen h5 {
+		font-size: 0.75em;
+	}
+
+
+	/* To switch between logos */
+	#mobile-logo {
+		display: block;
+	}
+
+	#logo {
+		display: none;
+	}
+
+
+
+	section #update-popup {
+		line-height: 1.1em;
+	}
+
+	/* Fully Refactored */
+	section #update-popup img {
+		width: 40%;
+	}
+
+	section #update-popup h1 {
+		font-size: 1.6em;
+		line-height: 1.6em;
+	}
+
+	section #update-popup h2 {
+		font-size: 22px;
+	}
+
+	section #update-popup h4 {
+		font-size: 0.9em;
+	}
+
+	section #update-popup button {
+		left: 15px;
+		translate: 0 0;
+		width: 125px;
+		height: 30px;
+		font-size: 0.6em;
+	}
+
+	section #update-popup button:hover {
+		transform: none;
+	}
+
+
+
+
+	#copy-icon {
+		display: none;
+	}
+	
+	#select-icon {
+		display: block;
+	}
+
+	#copy-tooltip::after {
+		content: "Selected";
+	}
+
+
+
+
+
+
+	/* ---------refactoring stoped here--------- */
+
+	main {
+		border-left: none;
+		width: 100%;
+		height: 100%;
+		grid-column: 1;
+		grid-row: 2;
+		overflow: visible;
+	}
+
+	nav {
+		flex-direction: row;
+		padding-top: 0px;
+		grid-row: 4;
+	}
+
+	.navTab {
+		flex-direction: column;
+		align-self: flex-end;
+		gap: 5px;
+		border: none;
+		height: 85%;
+		width: 25%;
+		transition-property: height;
+	}
+
+	/* DONE */
+	.navTab svg {
+		margin: auto;
+		width: 50%;
+		height: 50%;
+	}
+
+	.navTab span {
+		margin: auto;
+		font-size: small;
+	}
+
+	.navTab.current span {
+		font-size: small;
+	}
+
+	.navTab.current svg {
+		width: 52%;
+		height: 52%;
+	}
+
+	.navTab:not(.current):hover {
+		background: rgba(32, 32, 32, 1);
+		border-top-right-radius: 15px;
+		border-bottom-right-radius: 0px;
+		border-top-left-radius: 15px;
+	}
+
+	.current {
+		/* margin-top: 0px; */
+		height: 95%;
+		/* background: rgb(67, 67, 67); */
+		background: linear-gradient(28deg, rgba(24, 24, 24, 1) 0%, rgba(32, 32, 32, 1) 44%, rgba(38, 38, 38, 1) 59%, rgba(80, 92, 92, 1) 100%);
+		border-top-left-radius: 17px;
+		/* border-top-right-radius: 17px; */
+		border-bottom-right-radius: 0px;
+		/* position: relative; */
+	}
+
+	.settings-bg {
+		padding: 1px;
+	}
+
+	.settings-bg:hover {
+		scale: none;
+	}
+
+	.settings-bg:active {
+		scale: 1.03;
+	}
+
+	.settings-info h3 {
+		font-size: 1em;
+		font-weight: 800;
+		margin-bottom: 1px;
+	}
+
+	.settings-info p {
+		font-size: 0.9em;
+	}
+
+	.settings svg:last-of-type {
+		left: 87%;
+		width: 40px;
+		height: 40px;
+	}
+
+	.settings-slide-right {
+		animation: settings-slide-right 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+	}
+	
+	.settings-slide-left {
+		animation: settings-slide-left 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+	}
+
+	.title h1 {
+		font-size: smaller;
+	}
+
+	#title-charCount {
+		font-size: x-small;
+	}
+
+	.title button {
+		margin-left: 2px;
+		width: 2em;
+		height: 2em;
+	}
+
+	#dont-forget {
+		transform: translateY(0);
+		transform: translateX(-500%);
+		top: 250px;
+		font-size: 0.85em; 
+	}
+
+	.mobile-instructions {
+		display: block;
+	}
+
+	#desktop-instructions {
+		display: none;
+	}
+
+	.feedback-option {
+		width: 70%;
+		height: 50px;
+	}
+
+	.feedback-option {
+		animation: settings-slide-left 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+	}
+
+	.feedback-option:hover {
+		scale: none;
+	}
+	
+	.feedback-option:active {
+		scale: 1.03;
+	}
+
+	#feedback-page a {
+		padding-left: 3em;
+		font-size: 1em;
+	}
+
+	#feedback-page a svg {
+		left: 5px;
+		width: 2em;
+		height: 2em;
+	}
+
+	#email-us {
+		display: flex;
+	}
+
+	.lyrics {
+		line-height: 1.2em;
+	}
+
+	.bg {
+		transform: translateY(0%);
+		transform: translateX(-1000%);
+		animation: lyrics-slide-right 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+	}
+
+	.lyrics-bg {
+		width: 100%;
+		height: 100%;
+		background-image: url("../assets/background 4.jpg");
+	}
+
+	*::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	*::-webkit-scrollbar-track {
+		border: none;
+
+	}
+
+	*::-webkit-scrollbar-thumb:active {
+		box-shadow: none;
+	}
+
+	#menu-button {
+		display: none;
+	}
+
+	aside {
+		display: none;
+	}
+
+	.tool-buttons {
+		width: 40px;
+		height: 40px;
+	}
+
+	.top-bottom-box {
+		gap: 3px;
+	}
+
+	.up-down {
+		width: 40px;
+		height: 30px;
+	}
+
+	#toolbar {
+		gap: 10px;
+		animation: button-slide-in-up 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+		bottom: 20px;
+		right: 20px;
+	}
+
+	.direction-bg {
+		padding: 2px;
+	}
+
+	.select-bg {
+		padding: 3px;
+	}
+
+	footer {
+		border-top: none;
+		grid-column: 1;
+		grid-row: 3;
+	}
+}
+
+
+/* If user switches to landsape give a warning */
+/* @media only screen and (orientation: landscape) {
+	#landscape {
+		position: absolute;
+		z-index: 999;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		background: black;
+		color: red;
+		font-weight: 900;
+	}
+
+	#landscape h3 {
+		color: red;
+		font-weight: 900;
+	}
+}
+
+@media only screen and (orientation: portrait) {
+	#landscape {
+		display: none;
+	}
+} */
+
+/* @media only screen and (orientation: landscape) {
+	body, html {
+		overflow-y: scroll;
+	}
+} */
