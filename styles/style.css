@@ -344,13 +344,17 @@ footer {
 
 footer p {
 	position: absolute;
-	z-index: 1;
-	float: left;
 	letter-spacing: 2px;
 	color: white;
 	font-size: smaller;
 	font-weight: 900;
 	animation: fade-in ease-in 1s;
-	/* padding-bottom: 10px;
-	padding-top: 10px; */
+}
+
+footer p:first-of-type {
+	left: 5px;
+}
+
+footer p:last-of-type {
+	right: 5px;
 }
